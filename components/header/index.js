@@ -12,7 +12,7 @@ export default function Header() {
           <FaPlayCircle /> GOOGLE FORM
         </Link>
         <nav className={styles.navigationMenu}>
-          <Link href="/">ANASAYFA</Link>
+          <Link href="/">HOME PAGE</Link>
         </nav>
       </div>
     </header>

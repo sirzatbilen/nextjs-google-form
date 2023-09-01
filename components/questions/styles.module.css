@@ -1,4 +1,4 @@
-.baslik{
+.title{
     display: flex;
     background-color: white;
     flex-direction: column;
@@ -18,7 +18,7 @@
     flex-direction: row;
     justify-content:space-around;
 }
-.cinsiyet {
+.gender {
     display: flex;
     justify-content: space-around;
     background-color: white;
@@ -28,7 +28,7 @@
     border-radius: 1rem;
     margin-top: 1rem;
 }
-.cinsTek{
+.gensin{
     margin: 1rem;
 }
 .input{
@@ -37,7 +37,7 @@
     align-items: center;
     width: 100%;
 }
-.inputTek{
+.inputSin{
     display: flex;
     width: 40%;
     margin: 1rem;
@@ -46,7 +46,19 @@
     flex-direction: column;
     background-color: white;
 }
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
 .button{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+}
+
+.reset{
     display: flex;
     align-items: flex-start;
     margin-bottom: 5rem;

@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import Sorular from "@/components/sorular/sorular";
+import Questions from "@/components/questions/Questions";
 import ChartTable from "@/components/chart/ChartTable";
 
 export default function HomePage() {
   return (
     <>
-      <Sorular />
+      <Questions />
       <ChartTable />
     </>
   );

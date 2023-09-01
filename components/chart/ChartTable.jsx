@@ -11,18 +11,18 @@ function ChartTable() {
       const ctx = chartRef.current.getContext("2d");
 
       if (chartInstance) {
-        chartInstance.destroy(); // Önceki grafiği temizle
+        chartInstance.destroy();
       }
 
-      const oranData = {
-        labels: ["Kadın", "Erkek", "Diğer"],
+      const rateData = {
+        labels: ["Woman", "Man", "Other"],
         datasets: [
           {
             label: "Dataset 1",
             data: [
-              data.filter((item) => item.cinsiyet === "kadın").length,
-              data.filter((item) => item.cinsiyet === "erkek").length,
-              data.filter((item) => item.cinsiyet === "Diger").length,
+              data.filter((item) => item.gender === "woman").length,
+              data.filter((item) => item.gender === "man").length,
+              data.filter((item) => item.gender === "other").length,
             ],
             backgroundColor: ["Red", "Blue", "Green"],
           },
@@ -31,7 +31,7 @@ function ChartTable() {
 
       const newChartInstance = new Chart(ctx, {
         type: "doughnut",
-        data: oranData,
+        data: rateData,
         options: {
           responsive: true,
           plugins: {
@@ -40,7 +40,7 @@ function ChartTable() {
             },
             title: {
               display: true,
-              text: "CİNSİYET GRAFİĞİ",
+              text: "GENDER CHART",
             },
           },
         },

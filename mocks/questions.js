@@ -1,6 +1,6 @@
-export const soru = [
-  { id: 1, type: "text", text: "Adınızı giriniz:", name: "AD" },
-  { id: 2, type: "text", text: "Soyadınızı giriniz:", name: "SOYAD" },
-  { id: 3, type: "text", text: "Mesleğinizi giriniz:", name: "MESLEK" },
-  { id: 4, type: "text", text: "Yaşadığınız ili giriniz:", name: "ŞEHİR" },
+export const question = [
+  { id: 1, type: "text", text: "Enter your name:", name: "NAME" },
+  { id: 2, type: "text", text: "Enter your last name:", name: "LASTNAME" },
+  { id: 3, type: "text", text: "Enter your occupation:", name: "JOB" },
+  { id: 4, type: "text", text: "Enter the city you live in:", name: "CITY" },
 ];

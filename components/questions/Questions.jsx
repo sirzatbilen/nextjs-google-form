@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useForm } from "react-hook-form";
-import { soru } from "@/mocks/questions";
+import { question } from "@/mocks/questions";
 import style from "./styles.module.css";
 import useQuestionStore from "@/hooks/useQuestionStore";
 import {
@@ -15,18 +15,19 @@ import {
   TextField,
 } from "@mui/material";
 
-export default function Sorular() {
-  const { setData, data } = useQuestionStore();
+export default function Questions() {
+  const { setData } = useQuestionStore();
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = (formData) => setData(formData);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={style.formYapi}>
-      <div className={style.baslik}>
+      <div className={style.title}>
         <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. A!</h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
@@ -35,39 +36,41 @@ export default function Sorular() {
           quae enim et.
         </p>
       </div>
-      <div className={style.cinsiyet}>
+      <div className={style.gender}>
         <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Cinsiyet</FormLabel>
+          <FormLabel id="demo-radio-buttons-group-label">
+            <h3>Gender</h3>
+          </FormLabel>
           <RadioGroup
             className={style.radio}
             aria-labelledby="demo-radio-buttons-group-label"
             name="radio-buttons-group"
           >
             <FormControlLabel
-              value="kadın"
-              control={<Radio {...register("cinsiyet", { required: true })} />}
-              label="Kadın"
-              className={style.cinsTek}
+              value="woman"
+              control={<Radio {...register("gender", { required: true })} />}
+              label="Woman"
+              className={style.gensin}
             />
             <FormControlLabel
-              value="erkek"
-              control={<Radio {...register("cinsiyet", { required: true })} />}
-              label="Erkek"
-              className={style.cinsTek}
+              value="man"
+              control={<Radio {...register("gender", { required: true })} />}
+              label="Man"
+              className={style.gensin}
             />
             <FormControlLabel
-              value="Diger"
-              control={<Radio {...register("cinsiyet", { required: true })} />}
-              label="Diğer"
-              className={style.cinsTek}
+              value="other"
+              control={<Radio {...register("gender", { required: true })} />}
+              label="Other"
+              className={style.gensin}
             />
           </RadioGroup>
         </FormControl>
-        {errors.cinsiyet && <p>Kullanıcı cinsiyet gereklidir.</p>}
+        {errors.gender && <p>User gender is required.</p>}
       </div>
       <div className={style.input}>
-        {soru.map((item) => (
-          <div key={item.name} className={style.inputTek}>
+        {question.map((item) => (
+          <div key={item.name} className={style.inputSin}>
             <label htmlFor={item.name}>{item.name}:</label>
             <TextField
               type="text"
@@ -76,18 +79,23 @@ export default function Sorular() {
               id={item.name}
               {...register(`${item.name}`, { required: true, min: 1 })}
             />
-            {errors[item.name] && <p>Kutucuğu doldurun.</p>}
+            {errors[item.name] && <p>Fill in the box.</p>}
           </div>
         ))}
       </div>
-      <Button
-        type="submit"
-        variant="contained"
-        prefetch={false}
-        className={style.button}
-      >
-        GÖNDER
-      </Button>
+      <div className={style.buttons}>
+        <Button
+          type="submit"
+          variant="contained"
+          prefetch={false}
+          className={style.button}
+        >
+          SUBMIT
+        </Button>
+        <Button type="reset" value="clear" className={style.reset}>
+          clear
+        </Button>
+      </div>
     </form>
   );
 }
