@@ -5,7 +5,8 @@
 - `npm run dev` ile browser da developer sayfasını açın ;
 
 -Bu proje next.js framework ve MUI , CHARTJS , ZUSTAND , REACT HOOK FORM kütüphaneleri ile yazılmıştır.
--css içinde style module kullandım
+-css içinde style module kullandım.
+-(next.js node.js uygulamasının güncel olmasını istiyor bununla 1 gün kadar uğraştım farketmemiştim node.js güncel olmasına dikkat edilmesi gerekebilir )
 
 -Öncelikle next.js projesi kurulumunu gerçekleştirdim ardından dosyaları düzenledim gereksiz dosyalardan kurtuldum.
 -page.jsx ve layout.jsx dosya içeriğini düzenledim.
