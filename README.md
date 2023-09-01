@@ -18,4 +18,4 @@
 -Her iki yapı içinde validasyon kullandım error mesajlarını tanımladım.
 -useQuestionStore.js dosyasında zustand ı kurdum ve datayı orada tutmak için de Questions.jsx submit içinde formData yı setData ya gönderdim böylelikle datayı zustand da tutabildim.
 -mocks dosyasında da questions.js dosyasını yani soruları bulunduruyorum.
--bu projeyi 8 günde tamamladım
+-Bu projeyi 8 günde toplamda yaklaşık 20 saatimi ayırarak tamamladım
